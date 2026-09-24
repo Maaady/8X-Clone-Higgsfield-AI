@@ -56,5 +56,5 @@ An autonomous, high-fidelity rebuild of the **Higgsfield AI** generative video c
    npm run build
    ```
 
-## 📁 Agent Logs
+## 📁 Agent Logs 
 The `.agent-logs/` directory contains structured logs and metadata tracking incremental agent execution and validation.
