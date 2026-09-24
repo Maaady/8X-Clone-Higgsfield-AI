@@ -1,4 +1,4 @@
-# Higgsfield AI Studio — Rebuild
+# Higgsfield AI Studio — Clone
 
 An autonomous, high-fidelity rebuild of the **Higgsfield AI** generative video creation platform. Designed for film directors, VFX artists, and AI creators, prioritizing spatiotemporal visual coherence, fine-grained virtual camera controls, and the flagship **Generation Recipe** recreation system.
 
@@ -55,18 +55,6 @@ An autonomous, high-fidelity rebuild of the **Higgsfield AI** generative video c
    ```bash
    npm run build
    ```
-
----
-
-## ⏱️ Five-Minute Product Walkthrough Guide
-
-- **0:00–0:30 — Introduction**: Overview of Higgsfield AI Studio and the goal of deterministic video generation.
-- **0:30–2:45 — Generation Flow**: Dashboard → Studio Composer → Prompt Magic Enhance → Select Model / Style / Aspect Ratio / Camera Motion → Generate Video → Live Neural Progress Pipeline.
-- **2:45–3:45 — Generation Recipe & Recreate**: Result screen inspection of prompt latents and parameters → Click **Recreate in Composer** to demonstrate full parameter restoration.
-- **3:45–4:30 — Library & Vault**: Search by keyword → Filter by favorites & style pills → Test list/grid layouts.
-- **4:30–5:00 — Error Simulation & Recovery**: Toggle "Simulate Error" in Navbar → Trigger generation to show GPU error message, automatic credit refund, and 1-click retry.
-
----
 
 ## 📁 Agent Logs
 The `.agent-logs/` directory contains structured logs and metadata tracking incremental agent execution and validation.
