@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: dark;
+@layer base {
+  :root {
+    color-scheme: dark;
+    --brand-amber: #f59e0b;
+    --brand-amber-light: #fbbf24;
+    --brand-cyan: #06b6d4;
+    --brand-violet: #8b5cf6;
+    --bg-dark: #08090e;
+    --card-dark: #0f111a;
+  }
+
+  body {
+    background-color: #07080d;
+    color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
 }
 
 /* Custom modern scrollbars */
@@ -11,36 +26,120 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(13, 14, 21, 0.6);
+  background: rgba(10, 12, 18, 0.7);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.16);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(245, 158, 11, 0.5);
 }
 
-/* Background mesh & grid textures */
-.bg-grid-pattern {
-  background-size: 32px 32px;
+/* Background grid & holographic textures */
+.bg-grid-holo {
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
-.creative-gradient-text {
-  background: linear-gradient(135deg, #ffffff 20%, #c4b5fd 60%, #00f2fe 100%);
+.bg-radial-cinema {
+  background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(6, 182, 212, 0.05) 35%, transparent 70%);
+}
+
+.bg-radial-subtle {
+  background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+}
+
+/* Holographic text styles */
+.gradient-amber-gold {
+  background: linear-gradient(135deg, #ffffff 0%, #fde68a 40%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.shadow-glow-brand {
-  box-shadow: 0 0 35px -5px rgba(124, 58, 237, 0.45);
+.gradient-cyan-prism {
+  background: linear-gradient(135deg, #ffffff 0%, #67e8f9 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.shadow-inner-glow {
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+.gradient-cinema-title {
+  background: linear-gradient(135deg, #ffffff 20%, #e2e8f0 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow effects */
+.shadow-glow-amber {
+  box-shadow: 0 0 25px -4px rgba(245, 158, 11, 0.35);
+}
+
+.shadow-glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.35);
+}
+
+.shadow-glow-card {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  background: rgba(15, 17, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(20, 24, 38, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-input {
+  background: rgba(10, 12, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  background: rgba(12, 15, 26, 0.85);
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 15px -2px rgba(245, 158, 11, 0.25);
+  outline: none;
+}
+
+/* Scanline and animation effects */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes neural-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-neural-gradient {
+  background-size: 200% 200%;
+  animation: neural-drift 8s ease infinite;
 }
