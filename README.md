@@ -57,8 +57,6 @@ An autonomous, high-fidelity rebuild of the **Higgsfield AI** generative video c
    ```
 
 <<<<<<< Updated upstream
-## 📁 Agent Logs 
-=======
 ## 📁 Agent Logs
 >>>>>>> Stashed changes
 The `.agent-logs/` directory contains structured logs and metadata tracking incremental agent execution and validation.
